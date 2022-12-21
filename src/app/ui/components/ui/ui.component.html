@@ -1,1 +1,18 @@
-<p>ui works!</p>
+<div class="d-flex flex-column ui">
+  <header>
+    <ng-content select=".tr-header"></ng-content>
+
+  </header>
+  <main class="d-flex flex-grow-1">
+    <aside>
+      <nav>
+        <ng-content select=".tr-nav"></ng-content>
+      </nav>
+    </aside>
+    <div class="d-flex flex-column flex-grow-1">
+      <div class="flex-grow-1 content">
+        <ng-content select=".tr-content"></ng-content>
+      </div>
+    </div>
+  </main>
+</div>
