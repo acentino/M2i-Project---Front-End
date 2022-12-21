@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faEye } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-icon-show',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./icon-show.component.scss']
 })
 export class IconShowComponent {
-
+  icon = faEye;
+  ngOnInit() {}
 }

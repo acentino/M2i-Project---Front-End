@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-icon-hide',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./icon-hide.component.scss']
 })
 export class IconHideComponent {
-
+  icon = faEyeSlash;
+  ngOnInit() {}
 }
