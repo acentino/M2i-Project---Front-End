@@ -1,0 +1,28 @@
+.ui {
+  height: 100vh;
+}
+
+.content {
+  background: var(--app-light);
+}
+
+header {
+  background: var(--app-primary);
+}
+
+aside {
+  background: var(--app-primary);
+}
+
+nav {
+  width: 250px;
+  transition: 500ms;
+}
+
+.close-aside {
+  width: 0px;
+}
+
+footer{
+  background: var(--app-primary);
+}
