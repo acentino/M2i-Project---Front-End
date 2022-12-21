@@ -1,1 +1,5 @@
-<p>nav works!</p>
+<ul *ngIf="collection$ | async as collection" class="list-group">
+  <li *ngFor="let channel of collection" class="list-group-item ">
+    # {{channel.name}}
+  </li>
+</ul>
