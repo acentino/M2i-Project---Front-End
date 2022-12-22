@@ -1,4 +1,5 @@
 import { User } from "../models/user";
+import { Channel } from "../models/channel";
 
 export interface MessageI {
   id: number;
