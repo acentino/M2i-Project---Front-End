@@ -16,8 +16,8 @@ export class ChannelsService {
     this.collection$ = this.httpClient.get<Channel[]>(`${this.urlApi}/channels`);
   }
 
-  public add(order: Channel): Observable<Channel> {
-    return this.httpClient.post<Channel>(`${this.urlApi}/channels`, Channel);
+  public add(channel: Channel): Observable<Channel> {
+    return this.httpClient.post<Channel>(`${this.urlApi}/channels`, channel);
   }
 
   public delete(id: string): Observable<void> {

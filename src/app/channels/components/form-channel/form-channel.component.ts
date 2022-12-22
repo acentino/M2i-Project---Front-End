@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Channel } from 'src/app/core/models/channel';
 @Component({
   selector: 'app-form-channel',
@@ -14,13 +14,16 @@ export class FormChannelComponent {
     this.submitted = new EventEmitter<Channel>();
   }
   ngOnInit() : void {
+
     this.form = this.formBuilder.group({
-      channelName : [this.init.name, Validators.required],
-      user:{ id :1},
-      id : [this.init.id],
+      name : [this.init.name, Validators.required],
+
     });
+    this.form?.get('name')?.setValue('toto');
+
   }
   onSubmit() {
     this.submitted.emit(this.form.value);
   }
+
 }
