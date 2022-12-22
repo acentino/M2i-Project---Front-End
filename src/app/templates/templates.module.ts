@@ -10,6 +10,7 @@ import { TemplateFullWidthComponent } from './components/template-full-width/tem
   ],
   imports: [
     CommonModule
-  ]
+  ],
+  exports:[TemplateFullWidthComponent]
 })
 export class TemplatesModule { }

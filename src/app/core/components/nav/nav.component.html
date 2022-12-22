@@ -1,5 +1,5 @@
-<ul *ngIf="collection$ | async as collection" class="list-group">
-  <li *ngFor="let channel of collection" class="list-group-item ">
-    # {{channel.name}}
+<ul *ngIf="collection$ | async as collection" class="nav flex-column">
+  <li class="nav-item">
+    <a *ngFor="let channel of collection" (click)="goToChannel(channel.name, channel.id)" class="nav-link">{{channel.id}}# {{channel.name}}</a>
   </li>
 </ul>

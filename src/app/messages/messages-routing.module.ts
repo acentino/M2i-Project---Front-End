@@ -5,13 +5,13 @@ import { PageEditMessageComponent } from './pages/page-edit-message/page-edit-me
 import { PageListMessagesComponent } from './pages/page-list-messages/page-list-messages.component';
 
 const routes: Routes = [
-  {path:'', component:PageListMessagesComponent},
-  {path:'add', component:PageAddMessageComponent},
-  {path:'edit', component:PageEditMessageComponent},
+  { path: ':id', component: PageListMessagesComponent },
+  { path: 'add', component: PageAddMessageComponent },
+  { path: 'edit', component: PageEditMessageComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class MessagesRoutingModule { }
+export class MessagesRoutingModule {}

@@ -1,1 +1,10 @@
-<p>page-list-messages works!</p>
+<app-template-full-width title="# {{ channelName }}">
+  <div *ngIf="channelMessages$ | async as collection">
+    <div *ngFor="let message of collection">
+      <span>{{ message.user.userName }} à {{ message.hourMessage }} : </span><br>
+      <span>{{ message.content }}</span>
+    </div>
+  </div>
+</app-template-full-width>
+
+
