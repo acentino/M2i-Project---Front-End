@@ -1,0 +1,10 @@
+<form [formGroup]="form" (ngSubmit)='onSubmit()'>
+  <div class="form-group">
+    <label for="channelName">channelName</label><br>
+    <input type="text" id="channelName" name="channelName"><br>
+    <div class="alert" *ngIf="form.controls['channelName'].invalid && form.controls['channelName'].touched">
+      (*) Ce champs est requis
+    </div>
+    <input [disabled]="form.invalid" label="Valider" type="submit" value="Submit">
+  </div>
+</form>
